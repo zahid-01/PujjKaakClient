@@ -1,55 +1,107 @@
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import ScrollingLogos from "../ui/modal/scrollText";
-import ScrollingAd from "../ui/modal/scrollAds";
-import Button from "../ui/button/page";
-import { FaAndroid, FaApple } from "react-icons/fa";
+import heroImg from "../../../public/delivery.png";
+import { useNavigate } from "react-router-dom";
 
-export default function HeroSection() {
+const HeroSection = () => {
   const navigate = useNavigate();
-
-  const handleRedirect = () => {
+  const handleClick = () => {
     navigate("/coming-soon");
   };
-
   return (
-    <div className="md:min-h-screen bg-[#d50b23] text-white overflow-hidden">
-      <ScrollingAd />
-      <img
-        src="/banner.svg"
-        alt="fresh Meat"
-        className="w-[90vw] h-auto mx-auto object-cover"
-      />
+    <section className="bg-gray-100 px-6 md:px-16 py-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      {/* Text Content */}
+      <motion.div
+        initial={{ opacity: 0, x: -60 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="space-y-6"
+      >
+        <span className="text-sm text-black font-semibold">
+          🚚 Fast & Fresh Meat Delivery Service
+        </span>
 
-      <div className="container mx-auto px-4 py-5 flex flex-col items-center text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight"
-        >
-          Fresh Meat Delivered at your Doorstep!
-        </motion.h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <span className="text-[#d50b23]">Fresh Meat,</span> <br />
+          Delivered Fast to <span className="text-[#d50b23]">Your Door.</span>
+        </h1>
 
-        <div className="flex gap-6 mt-6">
-          <Button
-            text="Download for Android"
-            className="text-[10px]"
-            onClick={handleRedirect}
-            icon={<FaAndroid />}
-          />
-          <Button
-            icon={<FaApple />}
-            className="text-[10px]"
-            text="Download for iOS"
-            onClick={handleRedirect}
-          />
+        <p className="text-gray-600 text-sm">
+          A meat delivery shop, also known as PUJJ KAAK, is a retail service
+          that specializes in delivering fresh, high-quality meat products
+          directly to your doorstep. It offers a convenient way to purchase
+          chicken, mutton, beef, and other meats, along with select household
+          essentials—all from the comfort of your home.
+        </p>
+
+        {/* Buttons */}
+        <div className="flex gap-4">
+          <button
+            onClick={handleClick}
+            className="bg-[#d50b23] flex items-center gap-4 hover:bg-red-500 text-white font-semibold py-2 px-5 rounded-lg shadow"
+          >
+            <img src="../../../public/google play.png" className="w-12" />{" "}
+            Google Play
+          </button>
+          <button
+            onClick={handleClick}
+            className="bg-[#d50b23] flex items-center gap-4 hover:bg-red-500 text-white font-semibold py-2 px-5 rounded-lg shadow"
+          >
+            <img src="../../../public/app store.png" className="w-12" /> App
+            Store
+          </button>
         </div>
-      </div>
 
-      <div className="bg-white py-6 px-4 flex flex-wrap justify-around items-center gap-6 text-center text-sm sm:text-base text-gray-800">
-        <ScrollingLogos />
-      </div>
-    </div>
+        {/* Features */}
+        <div className="flex gap-8 mt-4 flex-wrap">
+          <div className="flex items-center gap-2">
+            <span className="text-[#d50b23] text-xl">✓</span>
+            <p className="text-sm text-gray-700">
+              Fastest service <br />
+              <span className="text-xs text-gray-500">
+                Free of cost delivery
+              </span>
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-[#d50b23] text-xl">✓</span>
+            <p className="text-sm text-gray-700">
+              100% Fresh & Halal <br />
+              <span className="text-xs text-gray-500">Maintains Quality</span>
+            </p>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Image */}
+      <motion.div
+        initial={{ opacity: 0, x: 60 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="flex justify-center"
+      >
+        <div className="relative">
+          <img
+            src={heroImg}
+            alt="Delivery Guy"
+            className="w-full max-w-md md:max-w-lg object-contain"
+          />
+          {/* Optional Badge Overlay */}
+          <div className="absolute top-3 left-3 bg-[#d50b23]/50 px-4 py-1 rounded-full text-sm font-medium shadow">
+            Total products: 50+
+          </div>
+          <div className="absolute bottom-3 left-0 bg-[#d50b23]/70 px-4 py-1 rounded-full text-sm font-medium shadow">
+            Years of exp: 3+
+          </div>
+          <div className="absolute bottom-80 left-90 bg-[#d50b23]/70 px-4 py-1 rounded-full text-sm font-medium shadow">
+            Halal Certified ✔
+          </div>
+          <div className="absolute bottom-60 left-10 bg-[#d50b23]/70 px-4 py-1 rounded-full text-sm font-medium shadow">
+            🌱 Freshness Guarantee
+          </div>
+        </div>
+      </motion.div>
+    </section>
   );
-}
+};
+
+export default HeroSection;

@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 
 const GreenCartBanner = () => {
   return (
-    <div className="bg-[#d50b23] text-white p-6 md:pt-8  my-6 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10">
+    <div className="bg-gray-100 p-6 md:pt-8 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10">
       {/* Left Text Section */}
       <div className="flex-1 space-y-4">
-        <h2 className="text-2xl md:text-3xl font-semibold leading-snug">
+        <h2 className="text-2xl md:text-3xl text-black font-semibold leading-snug">
           Fresh Meat delivered at Your Doorstep –{" "}
           <br className="hidden md:block" />
-          Only from <span className="font-bold">PUJJ KAAK</span>
+          Only from <span className="font-bold text-[#d50b23]">PUJJ KAAK</span>
         </h2>
-        <p className="text-sm text-white/90">
+        <p className="text-sm text-black">
           Download the app from app store or google play
         </p>
         <div className="flex gap-5 mt-2">
