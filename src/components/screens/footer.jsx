@@ -6,7 +6,7 @@ export default function Footer() {
         <p>
           PUJJ KAAK Pvt Ltd.
           <br />
-          Providing Fresh Meat with 💖
+          Providing Fresh Meat with 💖!
         </p>
       </aside>
       <nav className="flex flex-col gap-6">
