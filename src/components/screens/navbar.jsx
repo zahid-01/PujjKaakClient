@@ -2,6 +2,8 @@ import { FaAndroid } from "react-icons/fa";
 import Button from "../ui/button/page";
 import { useNavigate } from "react-router-dom";
 
+import logo from "../../imgs/logo.png";
+
 export default function Navbar() {
   const navigate = useNavigate();
   const handleClick = () => {
@@ -12,7 +14,7 @@ export default function Navbar() {
       <div className="navbar-start">
         <a className=" ">
           <img
-            src="../../imgs/logo.png"
+            src={logo}
             alt="logo"
             className="w-20 h-10 md:w-40 md:h-18 object-cover"
           />
