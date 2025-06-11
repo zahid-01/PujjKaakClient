@@ -1,3 +1,4 @@
+import GreenCartBanner from "./banner";
 import BeliefSection from "./belief";
 import FeaturesSection from "./features";
 import Footer from "./footer";
@@ -13,6 +14,7 @@ export default function Landing() {
       <FeaturesSection />
       <BeliefSection />
       <AnimatedTestimonials />
+      <GreenCartBanner />
       <Footer />
     </>
   );
