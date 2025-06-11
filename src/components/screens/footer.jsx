@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="footer sm:footer-horizontal bg-[#d50b23] text-white p-6">
       <aside>
-        <img src=" ../../logo.png" className="w-40 h-40" alt="logo" />
+        <img src="../../imgs/logo.png" className="w-40 h-40" alt="logo" />
         <p>
           PUJJ KAAK Pvt Ltd.
           <br />

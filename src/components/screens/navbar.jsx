@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className="navbar-start">
         <a className=" ">
           <img
-            src="../../logo.png"
+            src="../../imgs/logo.png"
             alt="logo"
             className="w-20 h-10 md:w-40 md:h-18 object-cover"
           />
