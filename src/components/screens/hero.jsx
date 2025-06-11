@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import heroImg from "../../../public/delivery.png";
+import heroImg from "../../imgs/delivery.png";
+import appStore from "../../imgs/app store.png";
+import googleStore from "../../imgs/google play.png";
 import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
@@ -39,15 +41,13 @@ const HeroSection = () => {
             onClick={handleClick}
             className="bg-[#d50b23] flex items-center gap-4 hover:bg-red-500 text-white font-semibold py-2 px-5 rounded-lg shadow"
           >
-            <img src="../../../public/google play.png" className="w-12" />{" "}
-            Google Play
+            <img src={googleStore} className="w-12" /> Google Play
           </button>
           <button
             onClick={handleClick}
             className="bg-[#d50b23] flex items-center gap-4 hover:bg-red-500 text-white font-semibold py-2 px-5 rounded-lg shadow"
           >
-            <img src="../../../public/app store.png" className="w-12" /> App
-            Store
+            <img src={appStore} className="w-12" /> App Store
           </button>
         </div>
 
@@ -86,16 +86,16 @@ const HeroSection = () => {
             className="w-full max-w-md md:max-w-lg object-contain"
           />
           {/* Optional Badge Overlay */}
-          <div className="absolute top-3 left-3 bg-[#d50b23]/50 px-4 py-1 rounded-full text-sm font-medium shadow">
-            Total products: 50+
+          <div className="absolute md:top-3 top-15 left-0 bg-[#d50b23]/50 px-4 py-1 rounded-full text-sm font-medium shadow">
+            50+ Products
           </div>
           <div className="absolute bottom-3 left-0 bg-[#d50b23]/70 px-4 py-1 rounded-full text-sm font-medium shadow">
             Years of exp: 3+
           </div>
-          <div className="absolute bottom-80 left-90 bg-[#d50b23]/70 px-4 py-1 rounded-full text-sm font-medium shadow">
+          <div className="absolute bottom-80 left-45 md:left-90 bg-[#d50b23]/70 px-4 py-1 rounded-full text-sm font-medium shadow">
             Halal Certified ✔
           </div>
-          <div className="absolute bottom-60 left-10 bg-[#d50b23]/70 px-4 py-1 rounded-full text-sm font-medium shadow">
+          <div className="absolute md:bottom-60 bottom-40 left-35 md:left-10 bg-[#d50b23]/70 px-4 py-1 rounded-full text-sm font-medium shadow">
             🌱 Freshness Guarantee
           </div>
         </div>

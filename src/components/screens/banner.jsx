@@ -1,6 +1,6 @@
-import googlePlay from "../../../public/google play.png";
-import appStore from "../../../public/app store.png";
-import deliveryGuy from "../../../public/delivery.png";
+import googlePlay from "../../imgs/google play.png";
+import appStore from "../../imgs/app store.png";
+import deliveryGuy from "../../imgs/delivery.png";
 import { Link } from "react-router-dom";
 
 const GreenCartBanner = () => {
