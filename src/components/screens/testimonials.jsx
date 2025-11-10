@@ -53,22 +53,33 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-rose-50 via-white to-red-100 py-24">
-      <div className="absolute -right-12 top-10 h-72 w-72 rounded-full bg-[#d50b23]/10 blur-3xl" />
-      <div className="absolute left-8 bottom-0 h-64 w-64 rounded-full bg-amber-200/40 blur-3xl" />
-      <div className="relative mx-auto max-w-6xl rounded-[3rem] border border-white/40 bg-white/80 px-6 py-16 shadow-2xl shadow-rose-100 backdrop-blur-md antialiased md:px-12 lg:px-16">
-        <div className="grid grid-cols-1 gap-24 md:grid-cols-2 md:gap-16">
-          <div className="space-y-6">
-            <span className="rounded-full bg-[#d50b23]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#d50b23]">
-              Voices from Srinagar
-            </span>
-            <h2 className="text-3xl font-bold leading-tight text-slate-900 md:text-4xl">
-              Loved by families that value flavour, freshness, and trust.
-            </h2>
-            <p className="text-base text-slate-600">
-              Hear how PUJJ KAAK elevates the everyday meal—from weekday dinners
-              to weekend feasts.
-            </p>
+    <section className="relative overflow-hidden bg-gradient-to-br from-rose-50 via-white to-red-100 py-28">
+      <div className="absolute -right-12 top-10 h-72 w-72 rounded-full bg-[#d50b23]/15 blur-3xl" />
+      <div className="absolute left-0 bottom-0 h-64 w-64 rounded-full bg-amber-200/50 blur-3xl" />
+      <div className="relative mx-auto max-w-6xl rounded-[3.5rem] border border-white/50 bg-white/85 px-6 py-18 shadow-[0_45px_120px_rgba(213,11,35,0.12)] backdrop-blur-xl antialiased md:px-12 lg:px-16">
+        <div className="grid grid-cols-1 gap-24 md:grid-cols-[0.85fr_1.15fr] md:gap-16">
+          <div className="flex flex-col justify-between gap-10">
+            <div className="space-y-6">
+              <span className="inline-flex rounded-full bg-[#d50b23]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#d50b23]">
+                Voices from Srinagar
+              </span>
+              <h2 className="text-3xl font-bold leading-tight text-slate-900 md:text-[38px] md:leading-[1.1]">
+                Loved by families that value flavour, freshness, and trust.
+              </h2>
+              <p className="text-base text-slate-600">
+                Hear how PUJJ KAAK elevates the everyday meal—from weekday dinners
+                to weekend feasts.
+              </p>
+            </div>
+            <div className="relative hidden w-full overflow-hidden rounded-3xl border border-[#d50b23]/15 bg-[#d50b23]/5 p-6 text-left shadow-inner shadow-red-200 md:block">
+              <div className="absolute right-6 top-6 text-5xl text-[#d50b23]/30">✓</div>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#d50b23]">
+                Fastest service
+              </p>
+              <p className="mt-3 text-sm text-slate-600">
+                Free of cost delivery
+              </p>
+            </div>
           </div>
           <div className="relative h-80 w-full">
             <AnimatePresence>
@@ -101,7 +112,7 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
                     duration: 0.4,
                     ease: "easeInOut",
                   }}
-                  className="absolute inset-0 origin-bottom rounded-[2.5rem] border border-white/40 bg-white/80 shadow-xl shadow-rose-200/40 backdrop-blur"
+                    className="absolute inset-0 origin-bottom rounded-[3rem] border border-white/60 bg-white/90 shadow-[0_40px_90px_rgba(213,11,35,0.12)] backdrop-blur"
                 >
                   <img
                     src={testimonial.src}
@@ -109,7 +120,7 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
                     width={500}
                     height={500}
                     draggable={false}
-                    className="h-full w-full rounded-[2.5rem] object-cover object-center"
+                    className="h-full w-full rounded-[3rem] object-cover object-center"
                   />
                 </motion.div>
               ))}
@@ -135,14 +146,21 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
               duration: 0.2,
               ease: "easeInOut",
             }}
-            className="max-w-xl"
+            className="max-w-xl rounded-[2.5rem] border border-white/60 bg-white/90 p-10 shadow-[0_25px_80px_rgba(213,11,35,0.08)] backdrop-blur"
           >
-            <h3 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              {testimonials[active].name}
-            </h3>
-            <p className="text-sm font-medium uppercase tracking-wide text-[#d50b23]">
-              {testimonials[active].designation}
-            </p>
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#d50b23]/10 text-[#d50b23]">
+                “
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-slate-900 md:text-3xl">
+                  {testimonials[active].name}
+                </h3>
+                <p className="text-sm font-medium uppercase tracking-wide text-[#d50b23]">
+                  {testimonials[active].designation}
+                </p>
+              </div>
+            </div>
             <motion.p className="mt-6 text-lg leading-relaxed text-slate-600 md:text-xl">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
@@ -169,10 +187,10 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
               ))}
             </motion.p>
           </motion.div>
-          <div className="flex gap-4">
+          <div className="flex gap-4 self-start md:self-center">
             <button
               onClick={handlePrev}
-              className="group/button flex h-12 w-12 items-center justify-center rounded-full border border-white/60 bg-white/90 text-[#d50b23] shadow-lg shadow-rose-200 transition hover:-translate-y-1 hover:border-[#d50b23]/30 hover:text-[#b50a1d]"
+              className="group/button flex h-12 w-12 items-center justify-center rounded-full border border-white/60 bg-white/95 text-[#d50b23] shadow-lg shadow-rose-200 transition hover:-translate-y-1 hover:border-[#d50b23]/30 hover:text-[#b50a1d]"
             >
               <IconArrowLeft className="h-6 w-6 transition-transform duration-300 group-hover/button:-translate-x-0.5" />
             </button>

@@ -1,4 +1,4 @@
-import { FaAndroid } from "react-icons/fa";
+import { FaAndroid, FaApple } from "react-icons/fa";
 import Button from "../ui/button/page";
 import { useNavigate } from "react-router-dom";
 
@@ -11,7 +11,7 @@ export default function Navbar() {
   };
   return (
     <header className="sticky top-0 z-50 px-4 pt-4 md:px-6">
-      <div className="relative mx-auto flex w-full max-w-6xl items-center justify-between rounded-full border border-white/20 bg-white/75 px-4 py-3 shadow-xl shadow-red-500/10 backdrop-blur-lg transition-all duration-300 md:px-8">
+      <div className="relative mx-auto flex w-full max-w-6xl items-center justify-between rounded-full border border-white/30 bg-white/85 px-4 py-3 shadow-[0_25px_60px_rgba(213,11,35,0.15)] backdrop-blur-xl transition-all duration-300 md:px-8">
         <div className="flex items-center gap-3">
           <a className="inline-flex items-center gap-2">
             <img
@@ -24,14 +24,17 @@ export default function Navbar() {
             </span>
           </a>
         </div>
-        <div className="flex items-center gap-3">
-          <p className="hidden text-sm font-medium text-gray-700 md:block">
-            Download the app
-          </p>
+        <div className="flex items-center gap-3 md:gap-4">
           <Button
-            text="Download for Android"
-            className="text-xs md:text-sm"
+            text="Android"
+            className="compact"
             icon={<FaAndroid />}
+            onClick={handleClick}
+          />
+          <Button
+            text="iOS"
+            className="compact hidden md:inline-flex"
+            icon={<FaApple />}
             onClick={handleClick}
           />
         </div>

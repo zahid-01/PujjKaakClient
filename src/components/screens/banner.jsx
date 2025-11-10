@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 
 const GreenCartBanner = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-[#d50b23] via-rose-500 to-orange-400 py-20">
+    <section className="relative overflow-hidden bg-gradient-to-r from-[#d50b23] via-rose-500 to-orange-400 py-24">
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/15 to-transparent" />
       <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-12 px-6 md:flex-row md:px-10">
         {/* Left Text Section */}
         <div className="flex-1 space-y-5 text-center md:text-left">
@@ -36,6 +37,14 @@ const GreenCartBanner = () => {
                 className="h-auto w-32 drop-shadow-lg"
               />
             </Link>
+          </div>
+          <div className="grid gap-3 pt-6 text-left text-sm text-white/85 md:grid-cols-2">
+            <div className="rounded-2xl border border-white/20 bg-white/10 px-4 py-3">
+              3000+ happy customers
+            </div>
+            <div className="rounded-2xl border border-white/20 bg-white/10 px-4 py-3">
+              Over 2000 boxes shipped
+            </div>
           </div>
         </div>
         {/* Right Image Section */}
