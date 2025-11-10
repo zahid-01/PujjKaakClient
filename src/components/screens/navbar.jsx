@@ -10,25 +10,32 @@ export default function Navbar() {
     navigate("/coming-soon");
   };
   return (
-    <div className="navbar bg-[#d50b23] shadow-md">
-      <div className="navbar-start">
-        <a className=" ">
-          <img
-            src={logo}
-            alt="logo"
-            className="w-20 h-10 md:w-40 md:h-18 object-cover"
+    <header className="sticky top-0 z-50 px-4 pt-4 md:px-6">
+      <div className="relative mx-auto flex w-full max-w-6xl items-center justify-between rounded-full border border-white/20 bg-white/75 px-4 py-3 shadow-xl shadow-red-500/10 backdrop-blur-lg transition-all duration-300 md:px-8">
+        <div className="flex items-center gap-3">
+          <a className="inline-flex items-center gap-2">
+            <img
+              src={logo}
+              alt="logo"
+              className="h-10 w-auto md:h-14"
+            />
+            <span className="hidden text-base font-semibold tracking-wide text-gray-900 md:block">
+              PUJJ KAAK
+            </span>
+          </a>
+        </div>
+        <div className="flex items-center gap-3">
+          <p className="hidden text-sm font-medium text-gray-700 md:block">
+            Download the app
+          </p>
+          <Button
+            text="Download for Android"
+            className="text-xs md:text-sm"
+            icon={<FaAndroid />}
+            onClick={handleClick}
           />
-        </a>
+        </div>
       </div>
-
-      <div className="navbar-end">
-        <Button
-          text="Download for Android"
-          className="text-[10px] md:text-sm"
-          icon={<FaAndroid />}
-          onClick={handleClick}
-        />
-      </div>
-    </div>
+    </header>
   );
 }

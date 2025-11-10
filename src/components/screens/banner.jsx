@@ -5,36 +5,52 @@ import { Link } from "react-router-dom";
 
 const GreenCartBanner = () => {
   return (
-    <div className="bg-gray-100 p-6 md:pt-8 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10">
-      {/* Left Text Section */}
-      <div className="flex-1 space-y-4">
-        <h2 className="text-2xl md:text-3xl text-black font-semibold leading-snug">
-          Fresh Meat delivered at Your Doorstep –{" "}
-          <br className="hidden md:block" />
-          Only from <span className="font-bold text-[#d50b23]">PUJJ KAAK</span>
-        </h2>
-        <p className="text-sm text-black">
-          Download the app from app store or google play
-        </p>
-        <div className="flex gap-5 mt-2">
-          <Link to="/coming-soon">
-            <img src={googlePlay} alt="Google Play" className=" h-auto w-24" />
-          </Link>
-          <Link to="/coming-soon">
-            <img src={appStore} alt="App Store" className="h-auto w-24" />
-          </Link>
+    <section className="relative overflow-hidden bg-gradient-to-r from-[#d50b23] via-rose-500 to-orange-400 py-20">
+      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
+      <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-12 px-6 md:flex-row md:px-10">
+        {/* Left Text Section */}
+        <div className="flex-1 space-y-5 text-center md:text-left">
+          <span className="inline-flex rounded-full bg-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white">
+            Download & Experience
+          </span>
+          <h2 className="text-3xl font-semibold leading-snug text-white md:text-4xl">
+            Fresh Meat delivered at your doorstep —
+            <span className="block font-bold">only from PUJJ KAAK</span>
+          </h2>
+          <p className="text-sm text-white/80 md:text-base">
+            Download the app from App Store or Google Play and order premium
+            halal cuts in a few taps.
+          </p>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-4 md:justify-start">
+            <Link to="/coming-soon" className="transition hover:-translate-y-1">
+              <img
+                src={googlePlay}
+                alt="Google Play"
+                className="h-auto w-32 drop-shadow-lg"
+              />
+            </Link>
+            <Link to="/coming-soon" className="transition hover:-translate-y-1">
+              <img
+                src={appStore}
+                alt="App Store"
+                className="h-auto w-32 drop-shadow-lg"
+              />
+            </Link>
+          </div>
+        </div>
+        {/* Right Image Section */}
+        <div className="flex flex-1 justify-center">
+          <div className="relative">
+            <div className="absolute -inset-6 rounded-[2.5rem] border border-white/20 bg-white/10 blur-xl" />
+            <img
+              src={deliveryGuy}
+              alt="Delivery Guy with Box"
+              className="relative w-full max-w-xs rounded-[2.5rem] border border-white/30 bg-white/10 p-6 shadow-2xl shadow-black/20 backdrop-blur md:max-w-sm"
+            />
+          </div>
         </div>
       </div>
-
-      {/* Right Image Section */}
-      <div className="flex-1 flex justify-center">
-        <img
-          src={deliveryGuy}
-          alt="Delivery Guy with Box"
-          className="w-full h-auto max-w-xs md:max-w-sm"
-        />
-      </div>
-    </div>
+    </section>
   );
 };
 
