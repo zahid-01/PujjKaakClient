@@ -7,6 +7,8 @@ import FeaturesSection from "./components/screens/features";
 import Footer from "./components/screens/footer";
 import HeroSection from "./components/screens/hero";
 import Navbar from "./components/screens/navbar";
+import DeleteAccount from "./components/screens/delete-account";
+import TermsAndConditions from "./components/screens/terms";
 import { AnimatedTestimonials } from "./components/screens/testimonials";
 
 // export default function LandingPage() {
@@ -99,7 +101,7 @@ import { AnimatedTestimonials } from "./components/screens/testimonials";
 //           {/* Footer */}
 //           <footer className="text-center py-8 bg-red-700 text-white">
 //             <p className="text-sm">
-//               &copy; {new Date().getFullYear()} Pujj Kaak. All rights reserved.
+//               &copy; {new Date().getFullYear()} Halal Nation. All rights reserved.
 //             </p>
 //           </footer>
 //         </main>
@@ -140,6 +142,9 @@ const App = () => (
     <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/coming-soon" element={<ComingSoon />} />
+      <Route path="/delete-account" element={<DeleteAccount />} />
+      <Route path="/terms" element={<TermsAndConditions />} />
+      <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
     </Routes>
   </BrowserRouter>
 );

@@ -20,7 +20,7 @@ export default function Navbar() {
               className="h-10 w-auto md:h-14"
             />
             <span className="hidden text-base font-semibold tracking-wide text-gray-900 md:block">
-              PUJJ KAAK
+              Halal Nation
             </span>
           </a>
         </div>

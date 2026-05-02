@@ -8,9 +8,10 @@ const ads = [
 ];
 
 export default function ScrollingAd() {
+  const Motion = motion;
   return (
     <div className="bg-white py-2 overflow-hidden mb-4">
-      <motion.div
+      <Motion.div
         className="flex gap-5 whitespace-nowrap"
         animate={{
           x: ["0%", "-30%"],
@@ -30,7 +31,7 @@ export default function ScrollingAd() {
             <p className="text-md font-semibold text-[#d50b23]">{ad.coupon}</p>
           </div>
         ))}
-      </motion.div>
+      </Motion.div>
     </div>
   );
 }

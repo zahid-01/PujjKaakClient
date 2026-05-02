@@ -28,9 +28,10 @@ const logos = [
 ];
 
 export default function ScrollingLogos() {
+  const Motion = motion;
   return (
     <div className="relative z-10 bg-white py-6 overflow-hidden">
-      <motion.div
+      <Motion.div
         className="flex gap-10 whitespace-nowrap"
         animate={{
           x: ["0%", "-50%"],
@@ -50,7 +51,7 @@ export default function ScrollingLogos() {
             <p className="text-xs">{logo.text}</p>
           </div>
         ))}
-      </motion.div>
+      </Motion.div>
     </div>
   );
 }

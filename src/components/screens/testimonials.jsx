@@ -2,9 +2,10 @@
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export const AnimatedTestimonials = ({ autoplay = false }) => {
+  const Motion = motion;
   const testimonials = [
     {
       quote:
@@ -31,13 +32,13 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
   ];
   const [active, setActive] = useState(0);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setActive((prev) => (prev + 1) % testimonials.length);
-  };
+  }, [testimonials.length]);
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  }, [testimonials.length]);
 
   const isActive = (index) => {
     return index === active;
@@ -48,7 +49,7 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
       const interval = setInterval(handleNext, 3000);
       return () => clearInterval(interval);
     }
-  }, [autoplay]);
+  }, [autoplay, handleNext]);
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
   };
@@ -67,7 +68,7 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
                 Loved by families that value flavour, freshness, and trust.
               </h2>
               <p className="text-base text-slate-600">
-                Hear how PUJJ KAAK elevates the everyday meal—from weekday dinners
+                Hear how Halal Nation elevates the everyday meal from weekday dinners
                 to weekend feasts.
               </p>
             </div>
@@ -84,7 +85,7 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
           <div className="relative h-80 w-full">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
-                <motion.div
+                <Motion.div
                   key={testimonial.src}
                   initial={{
                     opacity: 0,
@@ -122,13 +123,13 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
                     draggable={false}
                     className="h-full w-full rounded-[3rem] object-cover object-center"
                   />
-                </motion.div>
+                </Motion.div>
               ))}
             </AnimatePresence>
           </div>
         </div>
         <div className="mt-16 flex flex-col justify-between gap-12 md:mt-10 md:flex-row md:items-end">
-          <motion.div
+          <Motion.div
             key={active}
             initial={{
               y: 20,
@@ -161,9 +162,9 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
                 </p>
               </div>
             </div>
-            <motion.p className="mt-6 text-lg leading-relaxed text-slate-600 md:text-xl">
+            <Motion.p className="mt-6 text-lg leading-relaxed text-slate-600 md:text-xl">
               {testimonials[active].quote.split(" ").map((word, index) => (
-                <motion.span
+                <Motion.span
                   key={index}
                   initial={{
                     filter: "blur(10px)",
@@ -183,10 +184,10 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
                   className="inline-block"
                 >
                   {word}&nbsp;
-                </motion.span>
+                </Motion.span>
               ))}
-            </motion.p>
-          </motion.div>
+            </Motion.p>
+          </Motion.div>
           <div className="flex gap-4 self-start md:self-center">
             <button
               onClick={handlePrev}

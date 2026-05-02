@@ -1,4 +1,5 @@
 import logo from "../../imgs/logo.png";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="max-w-sm space-y-6">
           <img src={logo} className="h-20 w-auto drop-shadow-xl" alt="logo" />
           <p className="text-sm text-white/70">
-            PUJJ KAAK Pvt Ltd.
+            Halal Nation Pvt Ltd.
             <br />
             Providing fresh, halal meat with 💖 straight to your kitchen.
           </p>
@@ -50,8 +51,21 @@ export default function Footer() {
               </svg>
             </a>
           </div>
+          <div className="flex flex-wrap gap-4 text-sm text-white/70">
+            <Link to="/terms-and-conditions" className="transition hover:text-white">
+              Terms & Conditions
+            </Link>
+            <span className="text-white/20">|</span>
+            <Link to="/terms" className="transition hover:text-white">
+              Terms
+            </Link>
+            <span className="text-white/20">|</span>
+            <Link to="/delete-account" className="transition hover:text-white">
+              Delete Account
+            </Link>
+          </div>
           <p className="text-xs uppercase tracking-[0.2em] text-white/40">
-            © {new Date().getFullYear()} PUJJ KAAK Pvt Ltd. All rights reserved.
+            © {new Date().getFullYear()} Halal Nation Pvt Ltd. All rights reserved.
           </p>
         </div>
       </div>

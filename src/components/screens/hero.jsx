@@ -5,6 +5,7 @@ import googleStore from "../../imgs/google play.png";
 import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const Motion = motion;
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/coming-soon");
@@ -17,7 +18,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(213,11,35,0.07),_transparent_55%)]" />
       <div className="relative mx-auto grid max-w-6xl items-center gap-16 px-6 md:grid-cols-[1.1fr_0.9fr] md:px-10 lg:px-16">
         {/* Text Content */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -36,7 +37,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="max-w-xl text-base leading-relaxed text-slate-600 md:text-lg">
-            PUJJ KAAK brings premium, halal-certified cuts straight from trusted
+            Halal Nation brings premium, halal-certified cuts straight from trusted
             farms to your kitchen. Enjoy a carefully curated selection of meats,
             delivered chilled, hygienic, and ready to cook—without leaving home.
           </p>
@@ -101,10 +102,10 @@ const HeroSection = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </Motion.div>
 
         {/* Image */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -134,7 +135,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </Motion.div>
       </div>
     </section>
   );

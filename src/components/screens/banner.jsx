@@ -16,7 +16,7 @@ const GreenCartBanner = () => {
           </span>
           <h2 className="text-3xl font-semibold leading-snug text-white md:text-4xl">
             Fresh Meat delivered at your doorstep —
-            <span className="block font-bold">only from PUJJ KAAK</span>
+            <span className="block font-bold">only from Halal Nation</span>
           </h2>
           <p className="text-sm text-white/80 md:text-base">
             Download the app from App Store or Google Play and order premium
