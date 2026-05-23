@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-slate-950">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(213,11,35,0.2),_transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(27,94,59,0.2),_transparent_60%)]" />
       <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-16 text-white md:flex-row md:justify-between md:px-10">
         <div className="max-w-sm space-y-6">
-          <img src={logo} className="h-20 w-auto drop-shadow-xl" alt="logo" />
+          <img src={logo} className="h-16 w-auto rounded-md drop-shadow-xl" alt="Halal Nation" />
           <p className="text-sm text-white/70">
             Halal Nation Pvt Ltd.
             <br />

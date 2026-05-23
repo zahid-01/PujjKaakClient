@@ -15,7 +15,7 @@ export default function BeliefSection() {
             connection between you and the food you eat.
           </h2>
           <p className="max-w-xl text-sm font-semibold text-white/80 md:text-base md:leading-relaxed">
-            Taste, transparency and convenience shouldn’t be mutually exclusive.
+            Taste, transparency and convenience shouldn't be mutually exclusive.
             This has been our founding belief since we started in 2024, and it
             continues to be the force that drives us.
           </p>
@@ -30,13 +30,13 @@ export default function BeliefSection() {
             </p>
           </div>
           <div className="relative overflow-hidden rounded-3xl border border-white/30 bg-white/10 p-8 backdrop-blur-lg">
-            <div className="absolute -left-16 top-10 h-24 w-24 rounded-full bg-[#d50b23]/40 blur-3xl" />
+            <div className="absolute -left-16 top-10 h-24 w-24 rounded-full bg-[#1B5E3B]/40 blur-3xl" />
             <p className="text-4xl font-bold text-white">2000+</p>
             <p className="mt-2 text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
               boxes shipped
             </p>
           </div>
-          <div className="relative overflow-hidden rounded-3xl border border-white/30 bg-[#d50b23]/95 p-8 shadow-2xl shadow-black/30 md:col-span-2">
+          <div className="relative overflow-hidden rounded-3xl border border-white/30 bg-[#1B5E3B]/95 p-8 shadow-2xl shadow-black/30 md:col-span-2">
             <div className="absolute -right-24 top-0 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
             <p className="text-4xl font-bold text-white">30 tons</p>
             <p className="mt-2 text-xs font-semibold uppercase tracking-[0.3em] text-white/80">

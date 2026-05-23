@@ -16,7 +16,7 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
     },
     {
       quote:
-        "Ordering was seamless, and the quality exceeded our expectations. The platform’s flexibility—from cut selection to delivery timing—is remarkable.",
+        "Ordering was seamless, and the quality exceeded our expectations. The platform's flexibility—from cut selection to delivery timing—is remarkable.",
       name: "Mateen Ahmed",
       designation: "Srinagar",
       src: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww",
@@ -54,14 +54,14 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-rose-50 via-white to-red-100 py-28">
-      <div className="absolute -right-12 top-10 h-72 w-72 rounded-full bg-[#d50b23]/15 blur-3xl" />
-      <div className="absolute left-0 bottom-0 h-64 w-64 rounded-full bg-amber-200/50 blur-3xl" />
-      <div className="relative mx-auto max-w-6xl rounded-[3.5rem] border border-white/50 bg-white/85 px-6 py-18 shadow-[0_45px_120px_rgba(213,11,35,0.12)] backdrop-blur-xl antialiased md:px-12 lg:px-16">
+    <section className="relative overflow-hidden bg-gradient-to-br from-green-50 via-white to-emerald-100 py-28">
+      <div className="absolute -right-12 top-10 h-72 w-72 rounded-full bg-[#1B5E3B]/15 blur-3xl" />
+      <div className="absolute left-0 bottom-0 h-64 w-64 rounded-full bg-emerald-200/50 blur-3xl" />
+      <div className="relative mx-auto max-w-6xl rounded-[3.5rem] border border-white/50 bg-white/85 px-6 py-18 shadow-[0_45px_120px_rgba(27,94,59,0.12)] backdrop-blur-xl antialiased md:px-12 lg:px-16">
         <div className="grid grid-cols-1 gap-24 md:grid-cols-[0.85fr_1.15fr] md:gap-16">
           <div className="flex flex-col justify-between gap-10">
             <div className="space-y-6">
-              <span className="inline-flex rounded-full bg-[#d50b23]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#d50b23]">
+              <span className="inline-flex rounded-full bg-[#1B5E3B]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#1B5E3B]">
                 Voices from Srinagar
               </span>
               <h2 className="text-3xl font-bold leading-tight text-slate-900 md:text-[38px] md:leading-[1.1]">
@@ -72,9 +72,9 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
                 to weekend feasts.
               </p>
             </div>
-            <div className="relative hidden w-full overflow-hidden rounded-3xl border border-[#d50b23]/15 bg-[#d50b23]/5 p-6 text-left shadow-inner shadow-red-200 md:block">
-              <div className="absolute right-6 top-6 text-5xl text-[#d50b23]/30">✓</div>
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#d50b23]">
+            <div className="relative hidden w-full overflow-hidden rounded-3xl border border-[#1B5E3B]/15 bg-[#1B5E3B]/5 p-6 text-left shadow-inner shadow-green-200 md:block">
+              <div className="absolute right-6 top-6 text-5xl text-[#1B5E3B]/30">✓</div>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#1B5E3B]">
                 Fastest service
               </p>
               <p className="mt-3 text-sm text-slate-600">
@@ -113,7 +113,7 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
                     duration: 0.4,
                     ease: "easeInOut",
                   }}
-                    className="absolute inset-0 origin-bottom rounded-[3rem] border border-white/60 bg-white/90 shadow-[0_40px_90px_rgba(213,11,35,0.12)] backdrop-blur"
+                    className="absolute inset-0 origin-bottom rounded-[3rem] border border-white/60 bg-white/90 shadow-[0_40px_90px_rgba(27,94,59,0.12)] backdrop-blur"
                 >
                   <img
                     src={testimonial.src}
@@ -147,17 +147,17 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
               duration: 0.2,
               ease: "easeInOut",
             }}
-            className="max-w-xl rounded-[2.5rem] border border-white/60 bg-white/90 p-10 shadow-[0_25px_80px_rgba(213,11,35,0.08)] backdrop-blur"
+            className="max-w-xl rounded-[2.5rem] border border-white/60 bg-white/90 p-10 shadow-[0_25px_80px_rgba(27,94,59,0.08)] backdrop-blur"
           >
             <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#d50b23]/10 text-[#d50b23]">
-                “
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1B5E3B]/10 text-[#1B5E3B]">
+                "
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-slate-900 md:text-3xl">
                   {testimonials[active].name}
                 </h3>
-                <p className="text-sm font-medium uppercase tracking-wide text-[#d50b23]">
+                <p className="text-sm font-medium uppercase tracking-wide text-[#1B5E3B]">
                   {testimonials[active].designation}
                 </p>
               </div>
@@ -191,13 +191,13 @@ export const AnimatedTestimonials = ({ autoplay = false }) => {
           <div className="flex gap-4 self-start md:self-center">
             <button
               onClick={handlePrev}
-              className="group/button flex h-12 w-12 items-center justify-center rounded-full border border-white/60 bg-white/95 text-[#d50b23] shadow-lg shadow-rose-200 transition hover:-translate-y-1 hover:border-[#d50b23]/30 hover:text-[#b50a1d]"
+              className="group/button flex h-12 w-12 items-center justify-center rounded-full border border-white/60 bg-white/95 text-[#1B5E3B] shadow-lg shadow-green-200 transition hover:-translate-y-1 hover:border-[#1B5E3B]/30 hover:text-[#155232]"
             >
               <IconArrowLeft className="h-6 w-6 transition-transform duration-300 group-hover/button:-translate-x-0.5" />
             </button>
             <button
               onClick={handleNext}
-              className="group/button flex h-12 w-12 items-center justify-center rounded-full border border-[#d50b23] bg-[#d50b23] text-white shadow-lg shadow-rose-300 transition hover:-translate-y-1 hover:bg-[#b50a1d]"
+              className="group/button flex h-12 w-12 items-center justify-center rounded-full border border-[#1B5E3B] bg-[#1B5E3B] text-white shadow-lg shadow-green-300 transition hover:-translate-y-1 hover:bg-[#155232]"
             >
               <IconArrowRight className="h-6 w-6 transition-transform duration-300 group-hover/button:translate-x-0.5" />
             </button>

@@ -25,19 +25,19 @@ function Section({ id, title, children }) {
 
 export default function TermsAndConditions() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-rose-50 via-white to-amber-50">
+    <main className="min-h-screen bg-gradient-to-b from-green-50 via-white to-emerald-50">
       <div className="mx-auto w-full max-w-6xl px-6 py-10 md:px-10 lg:px-16">
         <div className="flex flex-col gap-8 border-b border-slate-200 pb-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl space-y-5">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-sm font-medium text-[#d50b23] transition hover:text-[#b50a1d]"
+              className="inline-flex items-center gap-2 text-sm font-medium text-[#1B5E3B] transition hover:text-[#155232]"
             >
               <span aria-hidden="true">←</span>
               Back to Halal Nation
             </Link>
             <div className="space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#d50b23]">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#1B5E3B]">
                 Terms and Conditions
               </p>
               <h1 className="text-4xl font-extrabold tracking-tight text-slate-950 md:text-5xl">
@@ -50,7 +50,7 @@ export default function TermsAndConditions() {
               </p>
             </div>
           </div>
-          <div className="rounded-2xl border border-white/80 bg-white/90 px-5 py-4 text-sm text-slate-600 shadow-lg shadow-rose-100">
+          <div className="rounded-2xl border border-white/80 bg-white/90 px-5 py-4 text-sm text-slate-600 shadow-lg shadow-green-100">
             <p className="font-semibold text-slate-900">Last updated</p>
             <p>May 2, 2026</p>
           </div>
@@ -67,7 +67,7 @@ export default function TermsAndConditions() {
                   <a
                     key={section.id}
                     href={`#${section.id}`}
-                    className="rounded-xl px-3 py-2 text-sm text-slate-600 transition hover:bg-rose-50 hover:text-[#d50b23]"
+                    className="rounded-xl px-3 py-2 text-sm text-slate-600 transition hover:bg-green-50 hover:text-[#1B5E3B]"
                   >
                     {section.label}
                   </a>

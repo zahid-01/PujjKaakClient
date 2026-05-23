@@ -9,8 +9,8 @@ export default function ComingSoon() {
     navigate("/");
   };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-600 via-[#d50b23] to-[#0f2b6b] flex items-center justify-center px-4">
-      <div className="bg-[#0f2b6b] backdrop-blur-lg p-10 rounded-3xl shadow-2xl max-w-lg w-full text-center">
+    <div className="min-h-screen bg-gradient-to-br from-[#1B5E3B] via-[#155232] to-[#0a2416] flex items-center justify-center px-4">
+      <div className="bg-[#0a2416] backdrop-blur-lg p-10 rounded-3xl shadow-2xl max-w-lg w-full text-center">
         <Motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ export default function ComingSoon() {
         </Motion.h1>
 
         <p className="text-white mb-6">
-          We’re cooking something amazing. Our Android and iOS apps are
+          We're cooking something amazing. Our Android and iOS apps are
           launching soon. Be the first to know!
         </p>
         <Button text="Back Home" onClick={handleRedirect} />

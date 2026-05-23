@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const GreenCartBanner = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-[#d50b23] via-rose-500 to-orange-400 py-24">
+    <section className="relative overflow-hidden bg-gradient-to-r from-[#1B5E3B] via-green-700 to-emerald-600 py-24">
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/15 to-transparent" />
       <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-12 px-6 md:flex-row md:px-10">

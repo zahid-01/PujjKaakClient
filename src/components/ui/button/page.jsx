@@ -21,7 +21,7 @@ const StyledWrapper = styled.div`
     padding: 0.95rem 2.1rem;
     border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, 0.4);
-    background: linear-gradient(120deg, #ff6b80 0%, #d50b23 55%, #7b0615 100%);
+    background: linear-gradient(120deg, #4ade80 0%, #1B5E3B 55%, #0a2416 100%);
     color: #fff;
     font-weight: 600;
     letter-spacing: 0.06em;
@@ -30,7 +30,7 @@ const StyledWrapper = styled.div`
     overflow: hidden;
     transition: transform 0.35s ease, box-shadow 0.35s ease,
       border-color 0.35s ease, background-position 0.5s ease;
-    box-shadow: 0 14px 38px rgba(213, 11, 35, 0.28);
+    box-shadow: 0 14px 38px rgba(27, 94, 59, 0.28);
     background-size: 180%;
     font-size: 0.85rem;
   }
@@ -52,8 +52,8 @@ const StyledWrapper = styled.div`
     border-radius: inherit;
     background: radial-gradient(
       circle,
-      rgba(255, 107, 128, 0.4),
-      rgba(213, 11, 35, 0)
+      rgba(74, 222, 128, 0.4),
+      rgba(27, 94, 59, 0)
     );
     opacity: 0;
     filter: blur(12px);
@@ -63,7 +63,7 @@ const StyledWrapper = styled.div`
 
   .primary-cta:hover {
     transform: translateY(-4px);
-    box-shadow: 0 24px 48px rgba(213, 11, 35, 0.38);
+    box-shadow: 0 24px 48px rgba(27, 94, 59, 0.38);
     border-color: rgba(255, 255, 255, 0.75);
     background-position: 40%;
   }
@@ -78,7 +78,7 @@ const StyledWrapper = styled.div`
 
   .primary-cta:active {
     transform: translateY(-2px) scale(0.98);
-    box-shadow: 0 14px 28px rgba(213, 11, 35, 0.32);
+    box-shadow: 0 14px 28px rgba(27, 94, 59, 0.32);
   }
 
   .primary-cta .icon {

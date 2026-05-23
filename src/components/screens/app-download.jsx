@@ -11,7 +11,7 @@ export default function AppDownload() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-600 via-[#d50b23] to-[#0f2b6b] flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-[#1B5E3B] via-[#155232] to-[#0a2416] flex items-center justify-center px-4 py-12">
       <div className="max-w-md w-full text-center">
         <Motion.h1
           initial={{ opacity: 0, y: -30 }}
@@ -40,7 +40,7 @@ export default function AppDownload() {
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
             onClick={handleDownload}
-            className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-2xl bg-[#0f2b6b] text-white font-semibold text-lg shadow-lg shadow-[#0f2b6b]/30 border border-white/15 cursor-pointer transition-shadow hover:shadow-xl hover:shadow-[#0f2b6b]/40"
+            className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-2xl bg-[#0a2416] text-white font-semibold text-lg shadow-lg shadow-[#1B5E3B]/30 border border-white/15 cursor-pointer transition-shadow hover:shadow-xl hover:shadow-[#1B5E3B]/40"
           >
             <FaAndroid className="text-2xl" />
             Download for Android

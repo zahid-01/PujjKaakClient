@@ -28,7 +28,7 @@ export default function ScrollingAd() {
             className="flex flex-col w-auto text-center text-sm sm:text-base text-gray-800"
           >
             <p className="text-md">{ad.title}</p>
-            <p className="text-md font-semibold text-[#d50b23]">{ad.coupon}</p>
+            <p className="text-md font-semibold text-[#1B5E3B]">{ad.coupon}</p>
           </div>
         ))}
       </Motion.div>
