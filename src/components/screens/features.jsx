@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaFire, FaCertificate, FaUtensils } from "react-icons/fa";
+import { FaFire, FaUtensils } from "react-icons/fa";
 
 const CATEGORIES = [
   { id: "mutton", label: "Kashmiri Mutton" },
@@ -202,11 +202,7 @@ export default function FeaturesSection() {
                     {prod.desc}
                   </p>
 
-                  {/* Sourcing Location Info */}
-                  <div className="mt-4 flex items-center gap-1.5 text-[10px] font-bold text-slate-500 uppercase tracking-wider text-left">
-                    <FaCertificate className="text-amber-500/80" />
-                    <span>Origin: {prod.source}</span>
-                  </div>
+
 
                   {/* Specs */}
                   <div className="mt-4 space-y-2 border-t border-stone-100 pt-4">

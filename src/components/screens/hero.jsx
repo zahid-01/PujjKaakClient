@@ -221,7 +221,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section 
+    <section
       className="relative min-h-screen overflow-hidden pt-20 pb-32 flex flex-col items-center justify-center bg-transparent"
       style={{
         backgroundImage: `radial-gradient(circle at 1px 1px, rgba(27,94,59,0.05) 1px, transparent 0)`,
@@ -239,17 +239,17 @@ export default function HeroSection() {
 
       {/* Centered Contents */}
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center space-y-10 flex flex-col items-center pt-8">
-        
+
         {/* Chef & Customer Overlap Avatar stack */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           className="flex items-center justify-center -space-x-4"
         >
           {AVATARS.map((src, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="h-10 w-10 md:h-12 md:w-12 rounded-full border-2 border-white bg-stone-150 overflow-hidden shadow-md flex-shrink-0"
               style={{ zIndex: 10 - index }}
             >
@@ -266,11 +266,11 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="font-serif text-4xl font-extrabold leading-[1.15] text-slate-900 md:text-5xl lg:text-7xl tracking-tight max-w-4xl"
+          className="font-serif text-4xl font-extrabold leading-[1.15] text-slate-900 md:text-5xl lg:text-7xl max-w-4xl"
         >
           Your premium destination for{" "}
           <Highlight className="font-serif font-black bg-gradient-to-r from-emerald-100/75 to-green-150/75 mt-2 md:mt-0">
-            halal & fresh meatcraft 🥩
+            HALAL & FRESH MEAT 🥩
           </Highlight>
         </motion.h1>
 
@@ -298,7 +298,7 @@ export default function HeroSection() {
             <span>Pre-order Crate</span>
             <FaChevronRight className="text-[10px]" />
           </button>
-          
+
           <button
             onClick={handleCTA}
             className="w-full sm:w-auto flex items-center justify-center gap-2.5 rounded-2xl border border-stone-250 bg-white/80 hover:bg-stone-50 text-slate-800 px-7 py-4 font-bold text-xs uppercase tracking-wider transition shadow-sm cursor-pointer"
@@ -323,24 +323,24 @@ export default function HeroSection() {
 
         {/* 3D Perspective Cards Grid (Adaptation of the Images Grid at bottom of layout) */}
         <div className="w-full pt-12" style={{ perspective: "1000px" }}>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 50, rotateX: 18 }}
             animate={{ opacity: 1, y: 0, rotateX: 12 }}
             transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
             className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto w-full"
-            style={{ 
+            style={{
               transformStyle: "preserve-3d",
-              transform: "skewY(-1.5deg)" 
+              transform: "skewY(-1.5deg)"
             }}
           >
             {SHOWCASE_CARDS.map((card, index) => (
               <motion.div
                 key={index}
-                whileHover={{ 
-                  rotateX: 0, 
-                  rotateY: 0, 
-                  rotateZ: 0, 
-                  y: -15, 
+                whileHover={{
+                  rotateX: 0,
+                  rotateY: 0,
+                  rotateZ: 0,
+                  y: -15,
                   scale: 1.03,
                   z: 30
                 }}
@@ -351,7 +351,7 @@ export default function HeroSection() {
                 {/* Visual Image container */}
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-stone-100">
                   <img src={card.image} alt={card.title} className="h-full w-full object-cover" />
-                  
+
                   {/* Crate Temp indicator on image */}
                   <span className="absolute right-2 top-2 flex items-center gap-1 rounded-full bg-white/90 border border-stone-200 px-2 py-0.5 text-[8px] font-bold text-slate-600 shadow-sm">
                     <FaSnowflake className="text-[#1B5E3B] text-[7px]" />
