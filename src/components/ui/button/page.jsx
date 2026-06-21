@@ -20,19 +20,20 @@ const StyledWrapper = styled.div`
     gap: 10px;
     padding: 0.95rem 2.1rem;
     border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    background: linear-gradient(120deg, #4ade80 0%, #1B5E3B 55%, #0a2416 100%);
+    border: 1px solid rgba(27, 94, 59, 0.15);
+    background: linear-gradient(120deg, #22c55e 0%, #1B5E3B 55%, #14492e 100%);
     color: #fff;
     font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     cursor: pointer;
     overflow: hidden;
     transition: transform 0.35s ease, box-shadow 0.35s ease,
       border-color 0.35s ease, background-position 0.5s ease;
-    box-shadow: 0 14px 38px rgba(27, 94, 59, 0.28);
+    box-shadow: 0 10px 30px rgba(27, 94, 59, 0.2);
     background-size: 180%;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .primary-cta::before {
@@ -40,7 +41,7 @@ const StyledWrapper = styled.div`
     position: absolute;
     inset: 1px;
     border-radius: inherit;
-    background: linear-gradient(160deg, rgba(255, 255, 255, 0.2), transparent 60%);
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.25), transparent 60%);
     opacity: 0.7;
     transition: opacity 0.35s ease;
   }
@@ -52,7 +53,7 @@ const StyledWrapper = styled.div`
     border-radius: inherit;
     background: radial-gradient(
       circle,
-      rgba(74, 222, 128, 0.4),
+      rgba(34, 197, 94, 0.25),
       rgba(27, 94, 59, 0)
     );
     opacity: 0;
@@ -62,9 +63,9 @@ const StyledWrapper = styled.div`
   }
 
   .primary-cta:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 24px 48px rgba(27, 94, 59, 0.38);
-    border-color: rgba(255, 255, 255, 0.75);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(27, 94, 59, 0.35);
+    border-color: rgba(27, 94, 59, 0.5);
     background-position: 40%;
   }
 
@@ -77,8 +78,8 @@ const StyledWrapper = styled.div`
   }
 
   .primary-cta:active {
-    transform: translateY(-2px) scale(0.98);
-    box-shadow: 0 14px 28px rgba(27, 94, 59, 0.32);
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 8px 20px rgba(27, 94, 59, 0.25);
   }
 
   .primary-cta .icon {
@@ -87,8 +88,8 @@ const StyledWrapper = styled.div`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(160deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.08));
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: inherit;
     height: 2.2rem;
     width: 2.2rem;
@@ -98,7 +99,7 @@ const StyledWrapper = styled.div`
   .primary-cta.compact {
     padding: 0.58rem 1.3rem;
     font-size: 0.72rem;
-    letter-spacing: 0.035em;
+    letter-spacing: 0.05em;
     gap: 7px;
   }
 
@@ -118,6 +119,20 @@ const StyledWrapper = styled.div`
       height: 1.9rem;
       width: 1.9rem;
     }
+  }
+
+  /* Secondary Outline Button Style */
+  .primary-cta.outline {
+    background: transparent;
+    border: 1px solid #1B5E3B;
+    color: #1B5E3B;
+    box-shadow: none;
+  }
+
+  .primary-cta.outline:hover {
+    background: rgba(27, 94, 59, 0.06);
+    border-color: #1B5E3B;
+    box-shadow: 0 0 15px rgba(27, 94, 59, 0.1);
   }
 `;
 

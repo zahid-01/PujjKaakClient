@@ -138,6 +138,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ComingSoon from "./components/screens/coming";
 import Landing from "./components/screens/landing";
 import AppDownload from "./components/screens/app-download";
+import SupportPage from "./components/screens/support";
+
 const App = () => (
   <BrowserRouter>
     <Routes>
@@ -145,6 +147,7 @@ const App = () => (
       <Route path="/app" element={<AppDownload />} />
       <Route path="/coming-soon" element={<ComingSoon />} />
       <Route path="/delete-account" element={<DeleteAccount />} />
+      <Route path="/support" element={<SupportPage />} />
       <Route path="/terms" element={<TermsAndConditions />} />
       <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
     </Routes>

@@ -16,50 +16,54 @@ const sections = [
 
 function Section({ id, title, children }) {
   return (
-    <section id={id} className="scroll-mt-28 border-t border-slate-200 py-8 first:border-t-0 first:pt-0">
-      <h2 className="text-2xl font-semibold tracking-tight text-slate-900">{title}</h2>
-      <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600">{children}</div>
+    <section id={id} className="scroll-mt-28 border-t border-stone-150 py-8 first:border-t-0 first:pt-0">
+      <h2 className="font-serif text-2xl font-bold tracking-tight text-slate-900">{title}</h2>
+      <div className="mt-4 space-y-4 text-xs md:text-sm leading-relaxed text-slate-655 font-sans">{children}</div>
     </section>
   );
 }
 
 export default function TermsAndConditions() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-green-50 via-white to-emerald-50">
-      <div className="mx-auto w-full max-w-6xl px-6 py-10 md:px-10 lg:px-16">
-        <div className="flex flex-col gap-8 border-b border-slate-200 pb-8 lg:flex-row lg:items-end lg:justify-between">
+    <main className="min-h-screen bg-transparent text-slate-900 py-10">
+      {/* Background Orbs */}
+      <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-emerald-100/20 blur-[120px]" />
+      <div className="absolute left-0 bottom-0 h-96 w-96 rounded-full bg-amber-100/10 blur-[120px]" />
+
+      <div className="relative mx-auto w-full max-w-6xl px-6 py-10 md:px-10 lg:px-16">
+        <div className="flex flex-col gap-8 border-b border-stone-200 pb-8 lg:flex-row lg:items-end lg:justify-between text-left">
           <div className="max-w-3xl space-y-5">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-sm font-medium text-[#1B5E3B] transition hover:text-[#155232]"
+              className="inline-flex items-center gap-2 text-sm font-bold text-[#1B5E3B] transition hover:text-emerald-700"
             >
               <span aria-hidden="true">←</span>
               Back to Halal Nation
             </Link>
             <div className="space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#1B5E3B]">
-                Terms and Conditions
-              </p>
-              <h1 className="text-4xl font-extrabold tracking-tight text-slate-950 md:text-5xl">
+              <span className="inline-flex rounded-full border border-emerald-250 bg-emerald-50 px-4 py-1 text-xs font-bold uppercase tracking-[0.2em] text-[#1B5E3B] shadow-sm">
+                Legal
+              </span>
+              <h1 className="font-serif text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
                 Halal Nation Terms of Service
               </h1>
-              <p className="max-w-3xl text-base leading-8 text-slate-600">
+              <p className="max-w-3xl text-sm md:text-base leading-relaxed text-slate-600">
                 These terms govern your use of Halal Nation&apos;s website, mobile
                 application, and related services. By using the platform, you
                 agree to the conditions below.
               </p>
             </div>
           </div>
-          <div className="rounded-2xl border border-white/80 bg-white/90 px-5 py-4 text-sm text-slate-600 shadow-lg shadow-green-100">
-            <p className="font-semibold text-slate-900">Last updated</p>
-            <p>May 2, 2026</p>
+          <div className="rounded-2xl border border-emerald-100 bg-white/90 px-5 py-4 text-xs text-slate-600 shadow-md border-green-glow">
+            <p className="font-bold text-slate-800">Last updated</p>
+            <p className="mt-1">June 21, 2026</p>
           </div>
         </div>
 
-        <div className="mt-8 grid gap-10 lg:grid-cols-[18rem_1fr]">
-          <aside className="lg:sticky lg:top-8 lg:self-start">
-            <div className="rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-sm">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">
+        <div className="mt-12 grid gap-10 lg:grid-cols-[18rem_1fr] text-left">
+          <aside className="lg:sticky lg:top-24 lg:self-start">
+            <div className="rounded-2xl border border-stone-200 bg-white/80 p-5 shadow-sm">
+              <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-slate-400">
                 On this page
               </p>
               <nav className="mt-4 flex flex-col gap-2">
@@ -67,7 +71,7 @@ export default function TermsAndConditions() {
                   <a
                     key={section.id}
                     href={`#${section.id}`}
-                    className="rounded-xl px-3 py-2 text-sm text-slate-600 transition hover:bg-green-50 hover:text-[#1B5E3B]"
+                    className="rounded-xl px-3 py-2 text-xs font-semibold text-slate-600 transition hover:bg-emerald-50 hover:text-[#1B5E3B]"
                   >
                     {section.label}
                   </a>
@@ -76,7 +80,7 @@ export default function TermsAndConditions() {
             </div>
           </aside>
 
-          <div className="rounded-3xl border border-slate-200 bg-white/90 px-6 py-8 shadow-sm md:px-10">
+          <div className="rounded-3xl border border-emerald-100 bg-white/95 px-6 py-8 shadow-md md:px-10 border-green-glow">
             <Section id="acceptance" title="Acceptance">
               <p>
                 These terms apply to every visit to the platform and to every order
@@ -164,7 +168,7 @@ export default function TermsAndConditions() {
 
             <Section id="prohibited" title="Prohibited Conduct">
               <p>Do not use the platform to:</p>
-              <ul className="list-disc space-y-2 pl-5">
+              <ul className="list-disc space-y-2 pl-5 font-sans">
                 <li>break any law or encourage unlawful conduct;</li>
                 <li>submit false, misleading, hateful, obscene, or defamatory content;</li>
                 <li>infringe intellectual property or privacy rights;</li>
@@ -213,8 +217,7 @@ export default function TermsAndConditions() {
 
             <Section id="contact" title="Contact">
               <p>
-                For questions about these terms, refunds, or order-related issues, use
-                the support details published in the app or on the website.
+                For questions about these terms, refunds, or order-related issues, please contact compliance at support@halalnation.in.
               </p>
             </Section>
           </div>

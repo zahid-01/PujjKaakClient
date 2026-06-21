@@ -56,12 +56,12 @@ export default function Footer() {
               Terms & Conditions
             </Link>
             <span className="text-white/20">|</span>
-            <Link to="/terms" className="transition hover:text-white">
-              Terms
-            </Link>
-            <span className="text-white/20">|</span>
             <Link to="/delete-account" className="transition hover:text-white">
               Delete Account
+            </Link>
+            <span className="text-white/20">|</span>
+            <Link to="/support" className="transition hover:text-white">
+              Support
             </Link>
           </div>
           <p className="text-xs uppercase tracking-[0.2em] text-white/40">
