@@ -131,7 +131,6 @@ import { AnimatedTestimonials } from "./components/screens/testimonials";
 //   );
 // }
 
-// main.jsx
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -139,6 +138,7 @@ import ComingSoon from "./components/screens/coming";
 import Landing from "./components/screens/landing";
 import AppDownload from "./components/screens/app-download";
 import SupportPage from "./components/screens/support";
+import PrivacyPolicy from "./components/screens/privacy";
 
 const App = () => (
   <BrowserRouter>
@@ -150,6 +150,8 @@ const App = () => (
       <Route path="/support" element={<SupportPage />} />
       <Route path="/terms" element={<TermsAndConditions />} />
       <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
     </Routes>
   </BrowserRouter>
 );

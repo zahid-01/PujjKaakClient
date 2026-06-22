@@ -56,6 +56,10 @@ export default function Footer() {
               Terms & Conditions
             </Link>
             <span className="text-white/20">|</span>
+            <Link to="/privacy" className="transition hover:text-white">
+              Privacy Policy
+            </Link>
+            <span className="text-white/20">|</span>
             <Link to="/delete-account" className="transition hover:text-white">
               Delete Account
             </Link>
